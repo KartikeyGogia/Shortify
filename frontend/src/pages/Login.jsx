@@ -23,7 +23,7 @@ function Login() {
     e.preventDefault();
 
     try {
-      const response = await api.post("/auth/login", {
+      const response = await api.post("/auth/Login", {
         email,
         password,
       });
