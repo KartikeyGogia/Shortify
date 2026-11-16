@@ -30,14 +30,9 @@ const login = async (req, res) => {
     }
 
     const token = jwt.sign(
-      {
-        userId: user.id,
-      },
-      "mysecretkey",
-      {
-        expiresIn: "7d",
-      }
-    );
+  payload,
+  process.env.JWT_SECRET
+);
 
     res.json({
       message: "Login Successful",
